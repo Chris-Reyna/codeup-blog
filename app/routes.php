@@ -26,18 +26,6 @@ Route::get('/portfolio', function()
         return "This is my portfolio";
 });
 
-// Route::get('/sayhello/{name}', function($name)
-// {
-//     if ($name == "Chris")
-//     {
-//         return Redirect::to('/');
-//     }
-//     else
-//     {
-//         return "Hello, $name!";
-//     }
-// });
-
 Route::get('/sayhello/{name}', function($name)
 {
 
