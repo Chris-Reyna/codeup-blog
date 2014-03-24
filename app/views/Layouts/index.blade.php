@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Portfolio</title>
+    <title>Home Page</title>
 </head>
 <body>
     @yield('content')
