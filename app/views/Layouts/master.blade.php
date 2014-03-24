@@ -18,6 +18,7 @@
       		padding-bottom: 150px;
     	}
 	   </style>
+
 	   @yeild('topscript')
 </head>
 <body>
@@ -35,9 +36,9 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="http://codeup.dev/portfolio.html">Portfolio</a></li>
-              <li><a href="http://codeup.dev/resume.html">Resumé</a></li>
-              <li><a href="http://codeup.dev/blog.html">Blog</a></li>
+              <li><a href="http://blog.dev/portfolio">Portfolio</a></li>
+              <li><a href="http://blog.dev/resume">Resumé</a></li>
+              <li><a href="http://blog.dev/blog">Blog</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Assignments<b class="caret "></b></a>
                   <ul class="dropdown-menu">
@@ -59,6 +60,7 @@
           </div><!--/.nav-collapse -->
         </div>
     </div><!--Nav Bar ends-->
+
     @yield('content')
 </body>
 </html>
