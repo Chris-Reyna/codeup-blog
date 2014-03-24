@@ -48,19 +48,21 @@ Route::get('/sayhello/{name}', function($name)
     return View::make('my-first-view')->with($data);
 });
 
-Route::get('/rolldice/{roll}/{guess}', function($roll,$guess)
+Route::get('/rolldice/{guess}', function($guess)
 {
 	$roll = rand(1,6);
+	if ($roll == $guess){
+		$message = "Your guess was Correct!";
+	}else{
+		$message = "Your guess was WRONG!!";
+	}
+
 	$data = array(
 		'roll' => $roll,
-		'guess' => $guess
-		// 'message' => $message
+		'guess' => $guess,
+		'message' => $message
 		);
-	// if ($roll == $guess){
-	// 	$message = "Your guess was Correct!";
-	// }else{
-	// 	$message = "Your guess was WRONG!!";
-	// }
+
 	return View::make('roll-dice')->with($data);
 
 
