@@ -19,9 +19,7 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/blog', 'HomeController@showBlog' );
 
-
-
-
+Route::resource('posts', 'PostsController');
 
 
 
