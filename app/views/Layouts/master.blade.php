@@ -14,9 +14,15 @@
 	   .main-content{
 	     padding: 50px;
 	   }
+     .content {
+      padding-top: 100px;
+     }
 	    #navi{
       		padding-bottom: 150px;
     	}
+      #masthead{
+        padding-top: 100px;
+      }
 	   </style>
 
 	   @yeild('topscript')
@@ -32,7 +38,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://codeup.dev">CR WEB PAGE</a>
+            <a class="navbar-brand" href="http://blog.dev">CR WEB PAGE</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -60,7 +66,6 @@
           </div><!--/.nav-collapse -->
         </div>
     </div><!--Nav Bar ends-->
-
     @yield('content')
 </body>
 </html>
