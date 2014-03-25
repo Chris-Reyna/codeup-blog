@@ -38,13 +38,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://blog.dev">CR WEB PAGE</a>
+            <a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">CR WEB PAGE</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="http://blog.dev/portfolio">Portfolio</a></li>
-              <li><a href="http://blog.dev/resume">Resumé</a></li>
-              <li><a href="http://blog.dev/blog">Blog</a></li>
+              <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
+              <li><a href="{{{ action('HomeController@showResume') }}}">Resumé</a></li>
+              <li><a href="{{{ action('HomeController@showBlog') }}}">Blog</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Assignments<b class="caret "></b></a>
                   <ul class="dropdown-menu">
