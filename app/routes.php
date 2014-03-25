@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
 });
 
 Route::get('/resume', function()
@@ -25,10 +25,17 @@ Route::get('/portfolio', function()
 {
         return View::make('portfolio');
 });
-Route::get('/home', function()
+
+Route::get('/blog', function()
 {
-        return View::make('home');
+        return View::make('blog');
 });
+
+
+
+
+
+
 
 Route::get('/sayhello/{name}', function($name)
 {
