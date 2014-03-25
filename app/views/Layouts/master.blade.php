@@ -11,7 +11,7 @@
 	!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	   <style type="text/css">
-	   .main-content{
+	   #main-content{
 	     padding: 50px;
 	   }
      .content {
@@ -66,6 +66,8 @@
           </div><!--/.nav-collapse -->
         </div>
     </div><!--Nav Bar ends-->
-    @yield('content')
+    <div class="container" id="main-content">
+      @yield('content')
+    </div>
 </body>
 </html>
