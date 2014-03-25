@@ -37,7 +37,7 @@
                 <h3><strong>LAMP+J Software Development Bootcamp</strong></h3>
                   <p>Graduated April 2014</p>
                   <a href="http://www.codeup.com/">Codeup</a>
-                <h3>Bachelors of Arts-Criminal Justic</h3>
+                <h3>Bachelors of Arts-Criminal Justice</h3>
                   <p>University of Texas San Antonio</p>
                   <p>Graduated May 2009</p>
 
