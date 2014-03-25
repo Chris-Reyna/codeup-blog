@@ -9,6 +9,7 @@
         <h1>Blog
           <p class="lead">Catchy Subtitle Here</p>
         </h1>
+        <h1>Create a New Post</h1>
       </div>
       <div class="col-md-5">
         <div class="well well-lg"> 
@@ -21,8 +22,6 @@
       </div>
     </div> 
   </div><!-- /cont -->
-  
- 
 </div>
 
 
