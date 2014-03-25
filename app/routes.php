@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'HomeController@showHome');
 
 Route::get('/resume','HomeController@showResume');
 
@@ -21,7 +21,6 @@ Route::get('/posts/index', 'HomeController@showBlog' );
 
 Route::resource('posts', 'PostsController');
 
-});
 
 
 

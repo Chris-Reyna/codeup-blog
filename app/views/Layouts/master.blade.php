@@ -38,7 +38,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">CR WEB PAGE</a>
+            <a class="navbar-brand" href="{{{ action('HomeController@showHome') }}}">CR WEB PAGE</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
