@@ -44,7 +44,7 @@
             <ul class="nav navbar-nav">
               <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
               <li><a href="{{{ action('HomeController@showResume') }}}">Resumé</a></li>
-              <li><a href="{{{ action('HomeController@showBlog') }}}">Blog</a></li>
+              <li><a href="{{{ action('PostsController@index') }}}">Blog</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media<b class="caret "></b></a>
                   <ul class="dropdown-menu">
