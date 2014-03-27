@@ -11,7 +11,9 @@
 </div>	
 
 <hr>
-
+<div>
+	<a href= "{{{ action('PostsController@edit', $post->id)}}}">Edit Post</a>
+</div>
 <div>
 	<a href= "{{{ action('PostsController@index')}}}">Return to Posts Listing</a>
 </div>
