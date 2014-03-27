@@ -19,13 +19,6 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::resource('posts', 'PostsController');
 
-// Route::get('orm-test', function () {
-//     // test code here
-//     $post1 = new Post();
-//$post1->title = "Eloquent is awesome!";
-//$post1->body = "It is super easy to create a new post.";
-//$post1->save();
-// });
 
 
 
