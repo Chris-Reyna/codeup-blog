@@ -18,9 +18,7 @@
 <div>
 	<a href= "{{{ action('PostsController@create')}}}">Create New Post</a>
 </div>
-<div>
-	<a href= "{{{ action('PostsController@show')}}}">View A Post</a>
-</div>
+
 
 
 @stop
