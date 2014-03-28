@@ -7,7 +7,7 @@
 @foreach($posts as $post)		
 <div class="blog-post">
 	<a class="blog-post-title" href= "{{{ action('PostsController@show', $post->id)}}}"><h2>{{{ $post->title }}}</h2></a>
-	<p class="blog-post-meta">{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:m A ') }}} </p>
+	<p class="blog-post-meta">{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A ') }}} </p>
 	<p> 
 		{{{ Str::words($post->body, 10) }}}
 	</p>
