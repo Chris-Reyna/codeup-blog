@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome');
+Route::get('/', 'HomeController@showHome')->before('auth.basic');
 
 Route::get('/resume','HomeController@showResume');
 
