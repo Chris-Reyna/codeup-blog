@@ -10,7 +10,8 @@
 
 	!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	   <style type="text/css">
+	 <script src="/js/jquery.js"></script> 
+     <style type="text/css">
 	   #main-content{
 	     padding: 50px;
 	   }
@@ -25,7 +26,7 @@
       }
 	   </style>
 
-	   @yeild('topscript')
+	   @yield('topscript')
 </head>
 <body>
 	<!-- Nav bar -->
@@ -65,5 +66,6 @@
     <div class="container" id="main-content">
       @yield('content')
     </div>
+    @yield('bottom-script')
 </body>
 </html>
