@@ -40,6 +40,7 @@ class PostsController extends \BaseController {
     	if ($validator->fails())
     	{
     	    // validation failed, redirect to the post create page with validation errors and old inputs
+    	    Session::flash('errorMessage', 'Post was NOT Posted Successfully!!');
     	    return Redirect::back()->withInput()->withErrors($validator);
     	}
     	else
@@ -52,7 +53,7 @@ class PostsController extends \BaseController {
 			$post->title = $title;
 			$post->body = $body;
 			$post->save();
-		
+			Session::flash('successMessage', 'Posted Successfully');
 			return Redirect::action('PostsController@index');
     	}
 
@@ -103,6 +104,7 @@ class PostsController extends \BaseController {
     	if ($validator->fails())
     	{
     	    // validation failed, redirect to the post create page with validation errors and old inputs
+    	    Session::flash('errorMessage', 'Post was NOT Updated Successfully!!');
     	    return Redirect::back()->withInput()->withErrors($validator);
     	}
     	else
@@ -114,6 +116,7 @@ class PostsController extends \BaseController {
 			$post->title = $title;
 			$post->body = $body;
 			$post->save();
+			Session::flash('successMessage', 'Updated Successfully');
 			return Redirect::action('PostsController@show',$post->id);
 		}
 	}
