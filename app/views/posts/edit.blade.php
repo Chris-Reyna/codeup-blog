@@ -17,7 +17,7 @@
 		{{ $errors->first('body', '<span class="help-block">:message</span>')}}
 	</div>
 	<div>
-		{{ Form::submit('Create New Post')}}
+		{{ Form::submit('Update Post')}}
 	</div>
 {{ Form::close() }}
 
