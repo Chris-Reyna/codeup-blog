@@ -15,6 +15,7 @@
 @endforeach					
 			
 <hr>
+{{ $posts->links()}}
 <div>
 	<a href= "{{{ action('PostsController@create')}}}">Create New Post</a>
 </div>
