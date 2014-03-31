@@ -19,9 +19,9 @@ class BaseModel extends Eloquent{
 	    return $utc->setTimezone('America/Chicago');
 	}
 	/*save username as lower case string*/
-	public function setUsernameAttribute($value)
+	public function setEmailAttribute($value)
 	{
-	    $this->attributes['username'] = strtolower($value);
+	    $this->attributes['email'] = strtolower($value);
 	}
 	/*save password as hash*/
 	public function setPasswordAttribute($value)
