@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 class Post extends Eloquent {
 
     protected $table = 'posts';
