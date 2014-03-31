@@ -4,8 +4,8 @@
 
 <div class="blog-post">
 	<h2 class="blog-post-title">{{{ $post->title }}}</h2>
-	<p class="blog-post-meta">Original Post Date: {{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A ') }}} </p>
-	<p class="blog-post-meta">Last Update: {{{ $post->updated_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A ') }}} </p>
+	<p class="blog-post-meta">Original Post Date: {{{ $post->created_at->format('l, F jS Y @ h:i A ') }}} </p>
+	<p class="blog-post-meta">Last Update: {{{ $post->updated_at->format('l, F jS Y @ h:i A ') }}} </p>
 	<p> 
 		{{{ $post->body }}}
 	</p>
