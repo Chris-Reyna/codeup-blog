@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome')->before('auth.basic');
+Route::get('/', 'HomeController@showHome');
+
+Route::get('/login', 'HomeController@showLogin');
+
+Route::post('/login', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@logout');
 
 Route::get('/resume','HomeController@showResume');
 
