@@ -24,6 +24,11 @@
       #masthead{
         padding-top: 100px;
       }
+      #post_body{
+        font-size: 20;
+        color: #88BB74;
+
+      }
 	   </style>
 
 	   @yield('topscript')
