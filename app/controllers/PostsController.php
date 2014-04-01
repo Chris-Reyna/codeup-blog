@@ -10,7 +10,7 @@ class PostsController extends BaseController {
 	    parent::__construct();
 	
 	    // run auth filter before all methods on this controller except index and show
-	    $this->beforeFilter('auth.basic', ['except' => ['index', 'show']]);
+	    $this->beforeFilter('auth', ['except' => ['index', 'show']]);
 	}
 	/**
 	 * Display a listing of the resource.
@@ -65,7 +65,7 @@ class PostsController extends BaseController {
     	{
         	// validation succeeded, create and save the post
     		//Save to DB
-    		$user_id = 2;
+    		$user_id = Auth::user()->id;
 			$title = Input::get('title');
 			$body = Input::get('body');
 			$post = new Post();
