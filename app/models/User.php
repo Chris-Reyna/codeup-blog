@@ -18,6 +18,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password');
+	
 	/**
 	*Relationship for many posts
 	*/
