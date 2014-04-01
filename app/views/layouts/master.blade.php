@@ -7,11 +7,12 @@
     <title>Laravel Blog</title>
 	   <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-	!-- Optional theme -->
+  <link href="/css/signin.css" rel="stylesheet">
+	<!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	 <script src="/js/jquery.js"></script> 
      <style type="text/css">
+
 	   #main-content{
 	     padding: 50px;
 	   }
@@ -61,8 +62,11 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar/">Default</a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
+              @if(Auth::check())
+              <li><a href="{{{ action('HomeController@logout') }}}">Logout ({{{ Auth::user()->email }}})</a></li>
+              @else
+              <li><a href="{{{ action('HomeController@showLogin') }}}">Login</a></li>
+              @endif
               <li class="active"><a href="./">Fixed top</a></li>
             </ul>
           </div><!--/.nav-collapse -->
