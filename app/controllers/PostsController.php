@@ -24,11 +24,11 @@ class PostsController extends BaseController {
 	
 		if ($search){
 	
-			$posts = Post::where('title','LIKE', "%{$search}%")->orWhere('body', 'LIKE',"%{$search}%")->paginate(4);
+			$posts = Post::with('user')->where('title','LIKE', "%{$search}%")->orWhere('body', 'LIKE',"%{$search}%")->paginate(4);
 	
 		}else{
 			//This shows all posts
-			$posts = Post::orderBy('created_at','desc')->paginate(2);
+			$posts = Post::with('user')->orderBy('created_at','desc')->paginate(2);
 		}
 		return View::make('posts.index')->with('posts', $posts);
 	}
@@ -65,11 +65,13 @@ class PostsController extends BaseController {
     	{
         	// validation succeeded, create and save the post
     		//Save to DB
+    		$user_id = 2;
 			$title = Input::get('title');
 			$body = Input::get('body');
 			$post = new Post();
 			$post->title = $title;
 			$post->body = $body;
+			$post->user_id = $user_id;
 			$post->save();
 			Session::flash('successMessage', 'Posted Successfully');
 			return Redirect::action('PostsController@index');
