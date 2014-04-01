@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends \BaseController {
+class PostsController extends BaseController {
 
 
 
@@ -19,11 +19,19 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//This shows all posts
-		$posts = Post::orderBy('created_at','desc')->paginate(3);
+		//search by title 
+		$search = Input::get('search');
+	
+		if ($search){
+	
+			$posts = Post::where('title','LIKE', "%{$search}%")->orWhere('body', 'LIKE',"%{$search}%")->paginate(4);
+	
+		}else{
+			//This shows all posts
+			$posts = Post::orderBy('created_at','desc')->paginate(2);
+		}
 		return View::make('posts.index')->with('posts', $posts);
 	}
-
 	/**
 	 * Show the form for creating a new resource.
 	 *

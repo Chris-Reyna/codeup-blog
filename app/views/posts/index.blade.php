@@ -2,8 +2,10 @@
 
 @section('content')
 
-
-				
+{{Form::open(array('action' => array('PostsController@index'), 'method' => 'GET'))}}
+{{Form::text('search') }}
+{{Form::submit('Search') }}
+{{Form::close()}}			
 @foreach($posts as $post)		
 <div class="blog-post">
 	<a class="blog-post-title" href= "{{{ action('PostsController@show', $post->id)}}}"><h2>{{{ $post->title }}}</h2></a>
@@ -16,7 +18,7 @@
 @endforeach					
 			
 <hr>
-{{ $posts->links()}}
+{{ $posts->appends(array('search' => Input::get('search')))->links()}}
 <div>
 	<a href= "{{{ action('PostsController@create')}}}">Create New Post</a>
 </div>
