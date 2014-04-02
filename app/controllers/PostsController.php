@@ -65,6 +65,8 @@ class PostsController extends BaseController {
     	{
         	// validation succeeded, create and save the post
     		//Save to DB
+    		//add image
+    		
     		$user_id = Auth::user()->id;
 			$title = Input::get('title');
 			$body = Input::get('body');
@@ -72,6 +74,22 @@ class PostsController extends BaseController {
 			$post->title = $title;
 			$post->body = $body;
 			$post->user_id = $user_id;
+			//adding img, is there an img uploaded
+			if (Input::hasFile('image'))
+			{
+				//retrieve file from user
+				$image = Input::file('image');
+			    $destinationPath = 'blog_img/';
+			    $image->getClientOriginalName();
+			    $extension = $image->getClientOriginalExtension();
+			    //adding a unique id and adding extension
+			    $imagename = uniqid() . '.' . $extension;
+			    //move file to folder blog_img
+			    $image->move($destinationPath,$imagename);
+			    //store the path to the file in the post
+			    $post->img_path = $destinationPath . $imagename;
+			    
+			}
 			$post->save();
 			Session::flash('successMessage', 'Posted Successfully');
 			return Redirect::action('PostsController@index');
@@ -131,10 +149,32 @@ class PostsController extends BaseController {
     	{
         	// validation succeeded, update and save the post
     		//Save to DB
+    		//
 			$title = Input::get('title');
 			$body = Input::get('body');
 			$post->title = $title;
 			$post->body = $body;
+			//adding img, is there an img uploaded
+			if (Input::hasFile('image'))
+			{
+				//retrieve file from user
+				$image = Input::file('image');
+			    $destinationPath = 'blog_img/';
+			    $image->getClientOriginalName();
+			    $extension = $image->getClientOriginalExtension();
+			    //adding a unique id and adding extension
+			    $imagename = uniqid() . '.' . $extension;
+			    //move file to folder blog_img
+			    $image->move($destinationPath,$imagename);
+			    //store the path to the file in the post
+			    $post->img_path = $destinationPath . $imagename;
+			    
+			}
+			if(Input::has('remove_img'))
+			{
+				File::delete(public_path() . '/' . $post->img_path);
+				$post->img_path = null;
+			}
 			$post->save();
 			Session::flash('successMessage', 'Updated Successfully');
 			return Redirect::action('PostsController@show',$post->id);
@@ -152,5 +192,4 @@ class PostsController extends BaseController {
 		$post->delete();
 		return Redirect::action('PostsController@index');
 	}
-
 }
