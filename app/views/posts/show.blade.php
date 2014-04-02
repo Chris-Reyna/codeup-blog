@@ -9,6 +9,11 @@
 	<p id="post_body"> 
 		{{{ $post->body }}}
 	</p>
+	<div>
+		@if ($post->img_path)
+			<img src="/{{{$post->img_path}}}">
+		@endif
+	</div>
 </div>	
 
 <hr>
