@@ -12,9 +12,9 @@ class PostTableSeeder extends DatabaseSeeder {
 
         $post1 = new Post();
         $post1->title = 'Manda';
-        $post1->body = 'This is Manda!!'
+        $post1->body = 'This is Manda!!';
         $post1->user_id = 1;
-        $post1->img_path = 'blog_img/533c556e94359.jpg'
+        $post1->img_path = 'blog_img/533c556e94359.jpg';
         $post1->save();
 
         $post2 = new Post();
