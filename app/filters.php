@@ -36,7 +36,10 @@ Route::filter('post.protect', function($route)
 {	
 	$id = $route->getParameter('posts');
 	$post = Post::find($id);
-	if (!Auth::user()->canManagePost($post)) return Redirect::action('PostsController@show', $id);
+	if (!Auth::user()->canManagePost($post)) {
+		Session::flash('errorMessage', 'You do not have permission to make changes!!');
+		return Redirect::action('PostsController@show', $id);
+	}
 });
 
 Route::filter('auth', function()
