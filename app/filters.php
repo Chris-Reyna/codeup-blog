@@ -32,6 +32,12 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
+Route::filter('post.protect', function($route)
+{	
+	$id = $route->getParameter('posts');
+	$post = Post::find($id);
+	if (!Auth::user()->canManagePost($post)) return Redirect::action('PostsController@show', $id);
+});
 
 Route::filter('auth', function()
 {
@@ -44,10 +50,7 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
-Route::filter('post.protect',function()
-{
 
-});
 
 /*
 |--------------------------------------------------------------------------
