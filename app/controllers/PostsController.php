@@ -11,6 +11,7 @@ class PostsController extends BaseController {
 	
 	    // run auth filter before all methods on this controller except index and show
 	    $this->beforeFilter('auth', ['except' => ['index', 'show']]);
+	    $this->beforeFilter('post.protect', ['only' => ['edit', 'update', 'destroy']]);
 	}
 	/**
 	 * Display a listing of the resource.
