@@ -1,5 +1,5 @@
 <?php
-class UserTableSeeder extends Seeder{
+class UserTableSeeder extends DatabaseSeeder{
 
 	public function run()
 	{
@@ -10,6 +10,7 @@ class UserTableSeeder extends Seeder{
         $user->password = 'adminPass123!';
         $user->firstname = 'Christopher';
         $user->lastname = 'Reyna';
+        $user->role_id = 1;
         $user->save();
 	}
 }
