@@ -13,7 +13,7 @@
 	<p class="blog-post-meta">Last Update: {{{ $post->updated_at->format('l, F jS Y @ h:i A ') }}}</p>
 	<p class="blog-post-meta">Author: {{{ $post->user->firstname }}} {{{ $post->user->lastname }}}</p>
 	<p id="post_body">
-		{{{ Str::words($post->body, 10) }}}
+		{{ Str::words($post->body, 10) }}
 	</p>
 </div>			
 @endforeach					

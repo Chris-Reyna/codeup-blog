@@ -7,7 +7,7 @@
 	<p class="blog-post-meta">Original Post Date: {{{ $post->created_at->format('l, F jS Y @ h:i A ') }}} </p>
 	<p class="blog-post-meta">Last Update: {{{ $post->updated_at->format('l, F jS Y @ h:i A ') }}} </p>
 	<p id="post_body"> 
-		{{{ $post->body }}}
+		{{ $post->body }}
 	</p>
 	<div>
 		@if ($post->img_path)
@@ -18,11 +18,13 @@
 
 <hr>
 <div>
+	@if (Auth::user()->canManagePost($post))
 	<a href= "" id="btnDeletePost" >Delete Post</a> |
 
 	<a href= "{{{ action('PostsController@edit', $post->id)}}}">Edit Post</a> |
-
+	@endif
 	<a href= "{{{ action('PostsController@index')}}}">Return to Posts Listing</a>
+	
 </div>
 
 {{Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'delete', 'id' => 'formDeletePost'))}}
