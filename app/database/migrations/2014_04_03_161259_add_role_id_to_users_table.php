@@ -15,7 +15,7 @@ class AddRoleIdToUsersTable extends Migration {
 		Schema::table('users', function($table)
 		{
 			$table->integer('role_id')->unsigned();
-			$table->foreign('role_id')->references('id')->on('roles');
+			
 		});
 	}
 
@@ -28,7 +28,7 @@ class AddRoleIdToUsersTable extends Migration {
 	{
 		Schema::table('users', function($table)
 		{
-			$table->dropForeign('users_role_id_foreign');
+			
 			$table->dropcolumn('role_id');
 			
 		});
