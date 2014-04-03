@@ -10,7 +10,8 @@
   <link href="/css/signin.css" rel="stylesheet">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	 <script src="/js/jquery.js"></script> 
+	 <script src="/js/jquery.js"></script>
+   <script src="/ckeditor/ckeditor.js"></script> 
      <style type="text/css">
 
 	   #main-content{
