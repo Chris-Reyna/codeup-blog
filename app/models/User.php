@@ -5,6 +5,14 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends BaseModel implements UserInterface, RemindableInterface {
 
+	const ROLE_ADMIN = 1;
+	const ROLE_AUTH = 2;
+
+	public static $roles =array(
+		array('id' => 1, 'name' => 'Admin'),
+		array('id' => 2, 'name' => 'Auth')
+	);
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -54,6 +62,16 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	public function getReminderEmail()
 	{
 		return $this->email;
+	}
+
+	public function isAdmin()
+	{
+		return $this->role_id == self::ROLE_ADMIN;
+	}
+
+	public function canManagePost($post)
+	{
+		return $this->isAdmin() || $this->id == $post->user_id; 
 	}
 
 }
