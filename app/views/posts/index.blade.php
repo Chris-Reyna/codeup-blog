@@ -3,6 +3,7 @@
 @section('content')
 
 {{Form::open(array('action' => array('PostsController@index'), 'method' => 'GET'))}}
+{{ Form::label('search', 'Search by Key Words') }}
 {{Form::text('search') }}
 {{Form::submit('Search') }}
 {{Form::close()}}			
