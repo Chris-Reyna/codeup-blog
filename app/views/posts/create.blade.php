@@ -27,13 +27,4 @@
     </script>
 {{ Form::close() }}
 
-
-
-
-
-
-
-
-
-
 @stop
