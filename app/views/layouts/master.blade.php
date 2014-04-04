@@ -83,5 +83,7 @@
       @yield('content')
     </div>
     @yield('bottom-script')
+    <hr>
+    <div><a href="{{ URL::previous() }}">Go Back</a></div>
 </body>
 </html>
