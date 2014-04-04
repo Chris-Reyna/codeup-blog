@@ -3,9 +3,10 @@
 @section('content')
 
 {{Form::open(array('action' => array('PostsController@index'), 'method' => 'GET'))}}
-{{ Form::label('search', 'Search by Key Words') }}
-{{Form::text('search') }}
-{{Form::submit('Search') }}
+<div class= 'pull-right'>
+	{{Form::text('search', null, array( 'placeholder' => 'Search by Key Words')) }}
+	{{Form::submit('Search') }}
+</div>
 {{Form::close()}}			
 @foreach($posts as $post)		
 <div class="blog-post">
