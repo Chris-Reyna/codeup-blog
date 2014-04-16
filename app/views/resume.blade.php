@@ -6,7 +6,7 @@
 
           <div class="blog-header">
             <h1 class="blog-title">Christopher Reyna</h1>
-            <p class="lead blog-description">FUll Stack Web Developer</p>
+            <p class="lead blog-description">Full Stack Web Developer</p>
           </div>
 
           <div class="row">
