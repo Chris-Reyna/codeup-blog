@@ -13,10 +13,10 @@
                 <div class="hero-unit">
                   <div class="row-fluid">
                     <div class="span7 marketting-info">
-                      <h1>TELL ABOUT YOUR BUSINESS AND CORPORATE.</h1>
+                      <h1>PORTFOLIO OF WEB PAGES</h1>
                       <p>
-                        We are Bootbusiness and we are awesome.We solve your technology problems by our awesome products.
-                        We are Bootbusiness and we are awesome.We solve your technology problems by our awesome products.
+                        LAMP+J Stack Web Developer.
+                        Fully functional Web pages with a Laravel framework and jQuery.
                       </p>
                       <h3>
                         <a href="product.html" class="btn">Learn more</a>
@@ -103,12 +103,11 @@
             <ul class="thumbnails">
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="img/placeholder-360x200.jpg" alt="product name">
+                  <img src="img/eat.png" alt="product name">
                   <div class="caption">
-                    <h3>Product name</h3>
+                    <h3>EatSafe-SA</h3>
                     <p>
-                      Few attractive words about your product.Few attractive words about your product.
-                      Few attractive words about your product.Few attractive words about your product.
+                      Searchable map of the San Antonio area, providing actual city health inspection data to help you make more informed choices for your dining experience.
                     </p>
                   </div>
                   <div class="widget-footer">
@@ -121,9 +120,9 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="img/placeholder-360x200.jpg" alt="product name">
+                  <img src="img/whack.png" alt="product name">
                   <div class="caption">
-                    <h3>Product name</h3>
+                    <h3>Whack-A-Vader</h3>
                     <p>
                       Few attractive words about your product.Few attractive words about your product.
                       Few attractive words about your product.Few attractive words about your product.
