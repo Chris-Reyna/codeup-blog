@@ -11,8 +11,8 @@
   <link href="/css/signin.css" rel="stylesheet">
   <link href="/css/font-awesome.css" rel="stylesheet">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	 <script src="/js/jquery.js"></script>
+	 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+   <script src="/js/jquery.js"></script>
    <script src="/ckeditor/ckeditor.js"></script> 
      <style type="text/css">
 
@@ -70,7 +70,6 @@
               @else
               <li><a href="{{{ action('HomeController@showLogin') }}}">Login</a></li>
               @endif
-              <li class="active"><a href="./">Fixed top</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -87,5 +86,10 @@
     @yield('bottom-script')
     <hr>
     <div><a href="{{ URL::previous() }}">Go Back</a></div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

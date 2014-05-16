@@ -112,8 +112,7 @@
                   </div>
                   <div class="widget-footer">
                     <p>
-                      <a href="#" class="btn btn-primary">Buy now</a>&nbsp;
-                      <a href="product.html" class="btn">Read more</a>
+                      <a href="http://eatsafe-sa.com" class="btn btn-primary">Visit Eatsafe-SA</a>&nbsp;
                     </p>
                   </div>
                 </div>
@@ -130,8 +129,7 @@
                   </div>
                   <div class="widget-footer">
                     <p>
-                      <a href="#" class="btn btn-primary">Buy now</a>&nbsp;
-                      <a href="product.html" class="btn">Read more</a>
+                      <a href="{{{ action('HomeController@showWhack') }}}" class="btn btn-primary">Whack-A-Vader</a>&nbsp;
                     </p>
                   </div>
                 </div>

@@ -28,6 +28,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('portfolio');
 	}
+	public function showWhack()
+	{
+		return View::make('whack');
+	}
 	public function showBlog()
 	{
 		return View::make('posts/index');

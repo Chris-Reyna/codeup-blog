@@ -71,7 +71,7 @@ class UsersController extends BaseController {
 	{
 		$user = User::findOrFail($id);
 		//show a post for /posts/show/id
-		return View::make('userss.show')->with('user', $user);
+		return View::make('users.show')->with('user', $user);
 	}
 
 	/**
